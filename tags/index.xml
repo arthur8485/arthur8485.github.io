@@ -6,9 +6,28 @@
     <description>Recent content in Tags on Arthur Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
+    <lastBuildDate>Thu, 19 Mar 2020 10:19:03 +0800</lastBuildDate>
     
 	<atom:link href="https://arthur8485.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>bot</title>
+      <link>https://arthur8485.github.io/tags/bot/</link>
+      <pubDate>Thu, 19 Mar 2020 10:19:03 +0800</pubDate>
+      
+      <guid>https://arthur8485.github.io/tags/bot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Telegram bot</title>
+      <link>https://arthur8485.github.io/tags/telegram-bot/</link>
+      <pubDate>Thu, 19 Mar 2020 10:19:03 +0800</pubDate>
+      
+      <guid>https://arthur8485.github.io/tags/telegram-bot/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
