@@ -6,9 +6,19 @@
     <description>Recent content in Categories on Arthur&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
+    <lastBuildDate>Thu, 19 Mar 2020 19:19:31 +0800</lastBuildDate>
     
 	<atom:link href="https://arthur8485.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://arthur8485.github.io/categories/tutorial/</link>
+      <pubDate>Thu, 19 Mar 2020 19:19:31 +0800</pubDate>
+      
+      <guid>https://arthur8485.github.io/categories/tutorial/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

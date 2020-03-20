@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on Arthur&#39;s Blog</title>
+    <link>https://arthur8485.github.io/tags/tutorial/</link>
+    <description>Recent content in Tutorial on Arthur&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Thu, 19 Mar 2020 19:19:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://arthur8485.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo &#43; Github &#43; Markdown</title>
+      <link>https://arthur8485.github.io/posts/hugo-tutorial/</link>
+      <pubDate>Thu, 19 Mar 2020 19:19:31 +0800</pubDate>
+      
+      <guid>https://arthur8485.github.io/posts/hugo-tutorial/</guid>
+      <description>Preperation - Hugo - Github - MarkDown    Hugo Installation by Chocolatey or Scoop (Windows)   choco install hugo -confirmscoop install hugoother OS check me
+  Git Installation   Download Link
+After installed Git, edit the path which is your system environment variables 1. Create a new Hugo project by cmd: let&amp;rsquo;s say our project name is hugo_blog
+hugo new site hugo_blogenter the new project file</description>
+    </item>
+    
+  </channel>
+</rss>
