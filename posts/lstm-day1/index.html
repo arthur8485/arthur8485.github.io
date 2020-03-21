@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+LSTM Day1
+</title>
+
+    
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+  
+  <meta name="author" content="Author Name" />
+  <meta name="description" content="Before introducing Long short-term memory(LSTM), here, Recurrent Neural Networks(RNN) should be known ! Recurrent Neural Networks The original neural networks can&amp;rsquo;t act like human. Instead of start thinking from scratch , you can surely understand the meaning of essay from every single word or patterns rather than forgetting all thoughts and restart your thinking from scratch &amp;mdash;&amp;mdash; persistence." />
+
+
+
+<meta name="generator" content="Hugo 0.67.1" />
+
+<link rel="canonical" href="https://arthur8485.github.io/posts/lstm-day1/" />
+
+
+<meta property="og:title" content="LSTM Day1" />
+<meta property="og:description" content="Before introducing Long short-term memory(LSTM), here, Recurrent Neural Networks(RNN) should be known !
+Recurrent Neural Networks
+The original neural networks can&rsquo;t act like human. Instead of start thinking from scratch , you can surely    understand
+the meaning of essay from every single word or patterns rather than forgetting all thoughts and restart
+your thinking from scratch &mdash;&mdash; persistence." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://arthur8485.github.io/posts/lstm-day1/" />
+<meta property="article:published_time" content="2020-03-21T19:39:42+08:00" />
+<meta property="article:modified_time" content="2020-03-21T19:39:42+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LSTM Day1"/>
+<meta name="twitter:description" content="Before introducing Long short-term memory(LSTM), here, Recurrent Neural Networks(RNN) should be known !
+Recurrent Neural Networks
+The original neural networks can&rsquo;t act like human. Instead of start thinking from scratch , you can surely    understand
+the meaning of essay from every single word or patterns rather than forgetting all thoughts and restart
+your thinking from scratch &mdash;&mdash; persistence."/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+<style>
+  a {
+    color: seagreen !important;
+  }
+</style>
+
+
+
+<style>
+  .inverted a {
+     color: darkseagreen !important;
+  }
+</style>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161207718-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-161207718-1');
+</script>
+
+
+  </head>
+
+  
+  <body style="background-image: url(/img/background/background.jpg);">
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/arthur8485.github.io\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          LSTM Day1
+          <div class="sub header">@ Author Name · Saturday, Mar 21, 2020 · 2 minute read · Update at Mar 21, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><h4 id="before-introducing-long-short-term-memorylstm-here-recurrent-neural-networksrnn-should-be-known-">Before introducing Long short-term memory(LSTM), here, Recurrent Neural Networks(RNN) should be known !</h4>
+<h2 id="recurrent-neural-networks">Recurrent Neural Networks</h2>
+<h4 id="the-original-neural-networks-cant-act-like-human-instead-of-start-thinking-from-scratch--you-can-surely----understand">The original neural networks can&rsquo;t act like human. Instead of start thinking from scratch , you can surely    understand</h4>
+<h4 id="the-meaning-of-essay-from-every-single-word-or-patterns-rather-than-forgetting-all-thoughts-and-restart">the meaning of essay from every single word or patterns rather than forgetting all thoughts and restart</h4>
+<h4 id="your-thinking-from-scratch--------persistence">your thinking from scratch &mdash;&mdash; persistence.</h4>
+<h2 id="lstm-networks">LSTM networks</h2>
+<h4 id="long-shot-term-memory-is-based-on-rnn-model-which-can-learn-long-term-of-dependencyies-lstms-are-explicitly">Long shot-term memory is based on RNN model, which can learn long-term of dependencyies. LSTMs are explicitly</h4>
+<h4 id="designed-to-avoid-the-long-term-dependency-problem-remembering-information-for-long-periods-of-time-is-practically">designed to avoid the long-term dependency problem. Remembering information for long periods of time is practically</h4>
+<h4 id="their-default-behavior-not-something-they-struggle-to-learn">their default behavior, not something they struggle to learn!</h4>
+<h4 id="all-recurrent-neural-networks-have-the-form-of-a-chain-of-repeating-modules-of-neural-network-in-standard-rnns">All recurrent neural networks have the form of a chain of repeating modules of neural network. In standard RNNs,</h4>
+<h4 id="this-repeating-module-will-have-a-very-simple-structure-such-as-a-single-tanh-layer">this repeating module will have a very simple structure, such as a single tanh layer.</h4>
+<h3 id="to-be-continue">To be continue&hellip;..</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> StandardScaler, OneHotEncoder, LabelEncoder
+<span style="color:#f92672">from</span> keras.models <span style="color:#f92672">import</span> Sequential
+<span style="color:#f92672">from</span> keras.layers <span style="color:#f92672">import</span> LSTM, Dense,Dropout, CuDNNLSTM
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+
+
+df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#34;D:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">python</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Lottery</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">winning_number</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">combined</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">combined.csv&#34;</span>)
+data <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">21</span>]
+
+scaler <span style="color:#f92672">=</span> StandardScaler()<span style="color:#f92672">.</span>fit(data<span style="color:#f92672">.</span>values)
+transformed_dataset <span style="color:#f92672">=</span> scaler<span style="color:#f92672">.</span>transform(data<span style="color:#f92672">.</span>values)
+transformed_df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(data<span style="color:#f92672">=</span>transformed_dataset, index<span style="color:#f92672">=</span>data<span style="color:#f92672">.</span>index)
+
+
+
+number_of_rows<span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>] <span style="color:#75715e">#all our games</span>
+window_length <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span> <span style="color:#75715e">#amount of past games we need to take in consideration for prediction</span>
+number_of_features <span style="color:#f92672">=</span> data<span style="color:#f92672">.</span>values<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>] <span style="color:#75715e">#balls count</span>
+train <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>empty([number_of_rows<span style="color:#f92672">-</span>window_length, window_length, number_of_features], dtype<span style="color:#f92672">=</span>float)
+
+label <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>empty([number_of_rows<span style="color:#f92672">-</span>window_length, number_of_features], dtype<span style="color:#f92672">=</span>float)
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, number_of_rows<span style="color:#f92672">-</span>window_length):
+    train[i]<span style="color:#f92672">=</span>transformed_df<span style="color:#f92672">.</span>iloc[i:i<span style="color:#f92672">+</span>window_length, <span style="color:#ae81ff">0</span>: number_of_features]
+    label[i]<span style="color:#f92672">=</span>transformed_df<span style="color:#f92672">.</span>iloc[i<span style="color:#f92672">+</span>window_length: i<span style="color:#f92672">+</span>window_length<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>: number_of_features]
+
+
+batch_size <span style="color:#f92672">=</span> <span style="color:#ae81ff">25</span>
+model <span style="color:#f92672">=</span> Sequential()
+model<span style="color:#f92672">.</span>add(LSTM(<span style="color:#ae81ff">128</span>,      
+           input_shape<span style="color:#f92672">=</span>(window_length, number_of_features),
+           return_sequences<span style="color:#f92672">=</span>True))
+model<span style="color:#f92672">.</span>add(Dropout(<span style="color:#ae81ff">0.2</span>))
+model<span style="color:#f92672">.</span>add(LSTM(<span style="color:#ae81ff">128</span>,           
+           return_sequences<span style="color:#f92672">=</span>False))
+model<span style="color:#f92672">.</span>add(Dropout(<span style="color:#ae81ff">0.2</span>))
+model<span style="color:#f92672">.</span>add(Dense(number_of_features))
+model<span style="color:#f92672">.</span>compile(loss<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mse&#39;</span>, optimizer<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;rmsprop&#39;</span>, metrics<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;accuracy&#39;</span>])
+
+model<span style="color:#f92672">.</span>fit(train, label,
+          batch_size<span style="color:#f92672">=</span><span style="color:#ae81ff">64</span>, epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>, validation_split<span style="color:#f92672">=</span><span style="color:#ae81ff">0.1</span>)
+model<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#34;C:</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Users</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">arthu</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">Desktop</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">train2</span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">RNN.model&#34;</span>)
+
+</code></pre></div><p>Reference:</p>
+<h5 id="1-理解lstm网络-kavin_lianghttpsblogcsdnnetshinanhualiuarticledetails49864219"><a href="https://blog.csdn.net/shinanhualiu/article/details/49864219">[1] 理解LSTM网络 Kavin_Liang</a></h5>
+<h5 id="2-understanding-lstm-networkshttpcolahgithubioposts2015-08-understanding-lstms"><a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">[2] Understanding LSTM Networks</a></h5></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/tag1" title="tag1">tag1</a>
+        
+          <a class="ui label" href="/tags/tag2" title="tag2">tag2</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="/img/avatar.jpg">
+      
+    </div>
+
+    <h3 class="ui header">Arthur Lin&#39;s blog<div class="sub header" style="margin-top: 0.5rem;">Never too late to learn ! Just keep working</div>
+    </h3>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="Archives"></i>
+      </a>
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/bot" title="bot">bot</a>
+    
+      <a class="ui label" href="/tags/hugo" title="hugo">hugo</a>
+    
+      <a class="ui label" href="/tags/profolio" title="profolio">profolio</a>
+    
+      <a class="ui label" href="/tags/tag1" title="tag1">tag1</a>
+    
+      <a class="ui label" href="/tags/tag2" title="tag2">tag2</a>
+    
+      <a class="ui label" href="/tags/telegram-bot" title="telegram-bot">telegram-bot</a>
+    
+      <a class="ui label" href="/tags/tutorial" title="tutorial">tutorial</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/category1" class="item">category1</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://arthur8485.github.io/posts/lstm-day1/" class="item">LSTM Day1</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/tutorial" class="item">tutorial</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://arthur8485.github.io/posts/hugo-tutorial/" class="item">Hugo &#43; Github &#43; Markdown</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui bottom attached center aligned segment">
+      
+      <p>© 2020 Arthur&#39;s Blog</p>
+      
+      <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/arthur8485.github.io\/'"></i>
+  </div>
+  <div class="item">
+    <i id="theme-switch" class="large link icon" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu">
+          
+            <div class="item">
+              <a href="mailto:arthur8485@gmail.com">
+                <i class="large mail icon" title="email"></i>
+              </a>
+            </div>
+          
+
+          
+            <div class="item">
+              <a href="https://github.com/arthur8485" target="_blank">
+                <i class="large github icon" title="github"></i>
+              </a>
+            </div>
+          
+
+          
+            <div class="item">
+              <a href="https://www.linkedin.com/in/asd" target="_blank">
+                <i class="large linkedin icon" title="linkedin"></i>
+              </a>
+            </div>
+          
+
+          
+            <div class="item">
+              <a href="https://www.stackoverflow.com/users/asd" target="_blank">
+                <i class="large stack overflow icon" title="stackoverflow"></i>
+              </a>
+            </div>
+          
+
+          
+            <div class="item">
+              <a href="https://codepen.io/asd" target="_blank">
+                <i class="large codepen icon" title="codepen"></i>
+              </a>
+            </div>
+          
+        </nav>
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161207718-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-161207718-1');
+</script>
+
+
+
+  </body>
+</html>

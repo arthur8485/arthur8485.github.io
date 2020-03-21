@@ -6,10 +6,23 @@
     <description>Recent content in Posts on Arthur&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 19 Mar 2020 19:19:31 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 21 Mar 2020 19:39:42 +0800</lastBuildDate>
     
 	<atom:link href="https://arthur8485.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LSTM Day1</title>
+      <link>https://arthur8485.github.io/posts/lstm-day1/</link>
+      <pubDate>Sat, 21 Mar 2020 19:39:42 +0800</pubDate>
+      
+      <guid>https://arthur8485.github.io/posts/lstm-day1/</guid>
+      <description>&lt;h4 id=&#34;before-introducing-long-short-term-memorylstm-here-recurrent-neural-networksrnn-should-be-known-&#34;&gt;Before introducing Long short-term memory(LSTM), here, Recurrent Neural Networks(RNN) should be known !&lt;/h4&gt;
+&lt;h2 id=&#34;recurrent-neural-networks&#34;&gt;Recurrent Neural Networks&lt;/h2&gt;
+&lt;h4 id=&#34;the-original-neural-networks-cant-act-like-human-instead-of-start-thinking-from-scratch--you-can-surely----understand&#34;&gt;The original neural networks can&amp;rsquo;t act like human. Instead of start thinking from scratch , you can surely    understand&lt;/h4&gt;
+&lt;h4 id=&#34;the-meaning-of-essay-from-every-single-word-or-patterns-rather-than-forgetting-all-thoughts-and-restart&#34;&gt;the meaning of essay from every single word or patterns rather than forgetting all thoughts and restart&lt;/h4&gt;
+&lt;h4 id=&#34;your-thinking-from-scratch--------persistence&#34;&gt;your thinking from scratch &amp;mdash;&amp;mdash; persistence.&lt;/h4&gt;</description>
+    </item>
     
     <item>
       <title>Hugo &#43; Github &#43; Markdown</title>
